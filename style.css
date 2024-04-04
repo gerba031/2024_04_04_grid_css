@@ -1,0 +1,110 @@
+/*primjer grida lorem ipsum */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 1rem;
+}
+
+.grid>div {
+    background: #Ede7f6;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+body {
+    margin: 2rem;
+    font: 12px system-ui;
+}
+
+/*kalendar style*/
+
+.calendar-wrapper {
+    max-width: 280px;
+    font: 100% system-ui;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.first-day {
+    grid-column-start: 4;
+}
+
+.day-name {
+    background: lightgray;
+}
+
+h1 {
+    text-align: center;
+}
+
+ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+li {
+    padding: 2px;
+}
+
+ol.calendar li:nth-child(7n-3),
+ol.calendar li:nth-child(7n-4) {
+    background-color: grey;
+}
+
+ol.calendar li:nth-child(6),
+ol.calendar li:nth-child(7) {
+    background-color: lightgray;
+}
+
+ol.calendar li:nth-child(3),
+ol.calendar li:nth-child(4) {
+    background-color: lightgrey;
+}
+
+.puls {
+    margin-top: 500px;
+    margin-left: 250px;
+    padding-left: 150px;
+    padding-top: 100px;
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    border-radius: 20px;
+    position: absolute;
+    color: wheat;
+    background-color: tomato;
+    text-align: center;
+    top: 100px;
+    left: 100px;
+    animation: pulsiraj 1s infinite;
+    animation-direction: alternate;
+    opacity: 50%;
+}
+
+@keyframes pulsiraj {
+    0% {color: aqua;
+        transform: scale(0.75);
+    }
+
+    20% {color: rgb(0, 255, 0);
+        transform: scale(0.8);
+    }
+
+    35% {color: rgb(255, 0, 106);
+        transform: scale(0.90);
+    }
+
+    70% {color: rgb(251, 255, 0);
+        transform: scale(1.25);
+    }
+
+    100% {
+        transform: scale(1.5);
+    }
+}
